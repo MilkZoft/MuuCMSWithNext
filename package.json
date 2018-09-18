@@ -1,5 +1,5 @@
 {
-  "name": "nodewithnext",
+  "name": "MuuCMS",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,8 +8,8 @@
     "build": "next build",
     "start": "next start src/frontend"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Carlos Santana",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.1.0",
     "@babel/node": "^7.0.0",
