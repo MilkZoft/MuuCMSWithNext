@@ -1,11 +1,9 @@
 {
   "name": "MuuCMS",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "babel-node src/backend --presets @babel/preset-env",
-    "build": "next build",
+    "build": "next build src/frontend",
     "start": "next start src/frontend"
   },
   "author": "Carlos Santana",
