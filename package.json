@@ -4,7 +4,9 @@
   "scripts": {
     "dev": "babel-node src/backend --presets @babel/preset-env",
     "build": "next build src/frontend",
-    "start": "next start src/frontend"
+    "start": "next start src/frontend",
+    "lint": "eslint --ext .jsx,.js src",
+    "lint:fix": "eslint --ext .jsx,.js --fix src"
   },
   "author": "Carlos Santana",
   "license": "MIT",
@@ -12,8 +14,14 @@
     "@babel/core": "7.1.0",
     "@babel/node": "7.0.0",
     "@babel/preset-env": "7.1.0",
+    "babel-eslint": "^9.0.0",
     "babel-plugin-module-resolver": "3.1.1",
-    "babel-preset-next": "1.2.0"
+    "babel-preset-next": "1.2.0",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1"
   },
   "dependencies": {
     "@zeit/next-sass": "0.2.0",

@@ -29,10 +29,12 @@ nextApp
         throw err;
       }
 
+      // eslint-disable-next-line no-console
       console.log('Running server on http://localhost:3000');
     });
   })
   .catch(err => {
+    // eslint-disable-next-line no-console
     console.error(err.stack);
     process.exit(1);
   });
