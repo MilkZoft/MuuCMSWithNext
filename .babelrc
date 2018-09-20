@@ -1,0 +1,14 @@
+{
+  "presets": ["next"],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "@backend": "./src/backend/",
+        "@frontend": "./src/frontend/",
+        "@pages": "./src/frontend/pages/",
+        "@app": "./src/frontend/app/"
+      }
+    }]
+  ]
+}
