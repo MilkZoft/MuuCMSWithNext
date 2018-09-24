@@ -4,10 +4,13 @@
     ["module-resolver", {
       "root": ["./"],
       "alias": {
-        "@backend": "./src/backend/",
-        "@frontend": "./src/frontend/",
-        "@pages": "./src/frontend/pages/",
-        "@app": "./src/frontend/app/"
+        "@backend": "./src/backend",
+        "@frontend": "./src/frontend",
+        "@pages": "./src/frontend/pages",
+        "@app": "./src/frontend/app",
+        "@layout": "./src/frontend/components/layout",
+        "@ui": "./src/frontend/components/ui",
+        "@styles": "./src/frontend/shared/styles"
       }
     }]
   ]

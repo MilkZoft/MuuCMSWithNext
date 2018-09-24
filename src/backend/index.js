@@ -21,6 +21,9 @@ nextApp
     // Express App
     const app = express();
 
+    // Static Public
+    app.use(express.static(path.join(__dirname, '../../public')));
+
     // Sending traffic to Next
     app.get('*', (req, res) => nextHandle(req, res));
 

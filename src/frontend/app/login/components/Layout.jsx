@@ -1,7 +1,10 @@
 import React from 'react';
+import Login from './Login';
 
 const Layout = () => (
-  <h1>Login Layout</h1>
+  <main>
+    <Login />
+  </main>
 );
 
 export default Layout;

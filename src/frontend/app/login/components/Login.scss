@@ -1,0 +1,60 @@
+.login {
+  .wrapper {
+    background: white;
+    color: #555;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 500px;
+
+    .success {
+      text-align: center;
+    }
+
+    .form {
+      position: relative;
+      height: 160px;
+      margin: 0 auto;
+      margin-top: 20px;
+      width: 90%;
+
+      .username,
+      .password,
+      .email {
+        color: white;
+        border-radius: 5px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        padding: 10px 0px 10px 0px;
+        text-indent: 10px;
+        width: 100%;
+      }
+
+      .required {
+        background: red;
+        border: 1px solid red;
+      }
+
+      .login {
+        float: left;
+        margin-right: 10px;
+      }
+
+      .register {
+        float: left;
+      }
+    }
+  }
+
+  .copyRight {
+    color: #777;
+    margin-top: 20px;
+    text-align: center;
+
+    a {
+      color: blue;
+    }
+  }
+}

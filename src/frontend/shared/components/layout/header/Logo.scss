@@ -1,0 +1,28 @@
+.logo {
+  align-self: center;
+  width: 230px;
+
+  a {
+    color: #666;
+    display: block;
+    z-index: 200;
+
+    img {
+      display: inline-block;
+      margin: 0;
+      margin-right: 5px;
+      vertical-align: middle;
+      width: 65px;
+    }
+
+    .brand {
+      font-size: 40px;
+      font-weight: bold;
+      vertical-align: middle;
+
+      .code {
+        color: blue;
+      }
+    }
+  }
+}

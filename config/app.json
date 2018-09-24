@@ -1,0 +1,180 @@
+{
+  "app": {
+    "default": "blog",
+    "allowed": {
+      "blog": {
+        "actions": {
+          "create": false,
+          "read": true,
+          "update": false,
+          "delete": false
+        },
+        "frontend": true,
+        "backend": true,
+        "dashboard": {
+          "contentKey": "Dashboard.modules.blog.name",
+          "icon": "fa-book"
+        },
+        "schema": {
+          "fields": "id, title, language, author, state",
+          "required": "title, slug, content, author",
+          "hidden": "year:getYear, month:getMonth, day:getDay, categorySlug",
+          "validation": "title, slug, day, month, year",
+          "relationships": [
+            {
+              "table": "categories",
+              "field": "category",
+              "id": false,
+              "bind": {
+                "field": "categorySlug",
+                "apply": "slug"
+              }
+            }
+          ]
+        }
+      },
+      "categories": {
+        "actions": {
+          "create": true,
+          "read": true,
+          "update": true,
+          "delete": true
+        },
+        "frontend": false,
+        "backend": true,
+        "dashboard": {
+          "contentKey": "Dashboard.modules.categories.name",
+          "icon": "fa-cubes"
+        },
+        "schema": {
+          "fields": "id, category, slug, state",
+          "required": "category, slug",
+          "validation": "category, slug"
+        }
+      },
+      "configuration": {
+        "actions": {
+          "create": false,
+          "read": true,
+          "update": false,
+          "delete": false
+        },
+        "frontend": false,
+        "backend": true,
+        "dashboard": {
+          "contentKey": "Dashboard.modules.configuration.name",
+          "icon": "fa-cog"
+        },
+        "schema": {
+          "fields": "id, title, theme, application, language, state",
+          "required": "title, theme, application, language, languages"
+        }
+      },
+      "contact": {
+        "actions": {
+          "create": false,
+          "read": true,
+          "update": false,
+          "delete": false
+        },
+        "frontend": true,
+        "backend": true,
+        "dashboard": {
+          "contentKey": "Dashboard.modules.contact.name",
+          "icon": "fa-envelope"
+        },
+        "schema": {
+          "fields": "id, name, email, state",
+          "hidden": "createdAt:now"
+        }
+      },
+      "forgotPassword": {
+        "actions": {
+          "create": false,
+          "read": false,
+          "update": false,
+          "delete": false
+        },
+        "frontend": true,
+        "backend": false,
+        "schema": {
+          "fields": "id, name, email, state",
+          "hidden": "createdAt:now"
+        }
+      },
+      "content": {
+        "actions": {
+          "create": true,
+          "read": true,
+          "update": true,
+          "delete": false
+        },
+        "frontend": false,
+        "backend": true,
+        "dashboard": {
+          "contentKey": "Dashboard.modules.content.name",
+          "icon": "fa-language"
+        },
+        "schema": {
+          "fields": "id, name, value, language, state",
+          "required": "name, value",
+          "validation": "name, value, language"
+        }
+      },
+      "login": {
+        "actions": {
+          "create": false,
+          "read": false,
+          "update": false,
+          "delete": false
+        },
+        "frontend": true,
+        "backend": false
+      },
+      "pages": {
+        "actions": {
+          "create": true,
+          "read": true,
+          "update": true,
+          "delete": true
+        },
+        "frontend": true,
+        "backend": true,
+        "dashboard": {
+          "contentKey": "Dashboard.modules.pages.name",
+          "icon": "fa-newspaper-o"
+        },
+        "schema": {
+          "fields": "id, title, author, language, state",
+          "required": "title, slug, content, author"
+        }
+      },
+      "profile": {
+        "private": true,
+        "frontend": true,
+        "backend": false
+      },
+      "register": {
+        "private": true,
+        "frontend": true,
+        "backend": false
+      },
+      "users": {
+        "private": true,
+        "frontend": true,
+        "backend": true,
+        "dashboard": {
+          "contentKey": "Dashboard.modules.users.name",
+          "icon": "fa-users"
+        },
+        "schema": {
+          "fields": "id, network, username, email, privilege, state",
+          "required": "network, username, email, privilege",
+          "validation": "network, username, email"
+        }
+      }
+    },
+    "mainTitle": "MuuCMS",
+    "debug": true
+  }
+}
