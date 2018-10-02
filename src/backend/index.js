@@ -2,6 +2,7 @@
 import express from 'express';
 import next from 'next';
 import path from 'path';
+import { parse } from 'url';
 
 // Environment
 const dev = process.env.NODE_ENV !== 'production';
@@ -23,6 +24,18 @@ nextApp
 
     // Static Public
     app.use(express.static(path.join(__dirname, '../../public')));
+
+    // Custom Routes
+    app.get('/dashboard/:appName/:action?', (req, res) => {
+      const { params: { appName, action } } = req;
+      const query = {
+        ...req.query,
+        appName,
+        action
+      };
+      console.log(req.params);
+      nextApp.render(req, res, '/dashboard/app', query);
+    });
 
     // Sending traffic to Next
     app.get('*', (req, res) => nextHandle(req, res));

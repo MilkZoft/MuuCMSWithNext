@@ -5,11 +5,12 @@
       "root": ["./"],
       "alias": {
         "@backend": "./src/backend",
+        "@configuration": "./config",
         "@frontend": "./src/frontend",
         "@pages": "./src/frontend/pages",
         "@app": "./src/frontend/app",
-        "@layout": "./src/frontend/components/layout",
-        "@ui": "./src/frontend/components/ui",
+        "@layout": "./src/frontend/shared/components/layout",
+        "@ui": "./src/frontend/shared/components/ui",
         "@styles": "./src/frontend/shared/styles"
       }
     }]

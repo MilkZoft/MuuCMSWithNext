@@ -1,4 +1,8 @@
+// Dependencies
 import React, { Component } from 'react';
+
+// Components
+// Styles
 import styles from './Sidebar.scss';
 
 const Sidebar = () => (
@@ -14,9 +18,9 @@ const Sidebar = () => (
 
       <ul>
         <li className={styles.active}>
-          <a href="#" data-content-key="{{ contentKey }}">
+          <a href="/dashboard/blog">
             <i className="fa"></i> &nbsp;
-            Option
+            Blog
           </a>
 
           <a href="#/create" className={styles.create}>

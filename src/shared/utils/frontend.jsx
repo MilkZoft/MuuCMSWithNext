@@ -2,10 +2,7 @@
 import React from 'react';
 
 // Configuration
-import { $baseUrl } from '@Configuration';
-
-// Components
-import Excerpt from '@Ui/Excerpt';
+import { $baseUrl } from '@configuration';
 
 // Utils
 import { isDefined, isBrowser } from './is';
@@ -187,16 +184,6 @@ export function isUser(connectedUser, userPrivilege) {
   }
 
   return !!username;
-}
-
-/**
- * Loads an image depending on the theme path
- *
- * @param {string} imagePath Path of the image
- * @returns {string} Image path with theme
- */
-export function loadImage(imagePath) {
-  return `/frontend/images/${imagePath}`;
 }
 
 /**

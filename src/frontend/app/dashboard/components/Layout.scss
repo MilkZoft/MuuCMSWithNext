@@ -1,0 +1,10 @@
+@import "../../../shared/styles/_dependencies.scss";
+
+body {
+  @include font($sourceSansPro);
+  background-position: left;
+  background-repeat: repeat-y;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
