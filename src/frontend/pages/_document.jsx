@@ -6,7 +6,6 @@ export default class MyDocument extends Document {
       <html lang="en">
         <Head>
           <title>MuuCMS with Next</title>
-          <link rel="stylesheet" href="/_next/static/style.css" />
         </Head>
 
         <body>

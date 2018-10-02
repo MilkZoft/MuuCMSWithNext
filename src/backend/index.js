@@ -23,6 +23,7 @@ nextApp
     const app = express();
 
     // Static Public
+    app.use('/node_modules', express.static(path.join(__dirname, '../../node_modules')));
     app.use(express.static(path.join(__dirname, '../../public')));
 
     // Custom Routes

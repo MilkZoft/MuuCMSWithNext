@@ -33,7 +33,8 @@
       a {
         @include fontSize($xLarge, $bold);
         color: $white;
-        text-indent: 10px;
+        text-indent: 20px;
+        text-decoration: none;
       }
     }
 

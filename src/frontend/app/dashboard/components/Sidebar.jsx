@@ -10,7 +10,7 @@ const Sidebar = ({ appName }) => (
     <div className={styles.wrapper}>
       <h2 className={styles.brand}>
         <a href="/">
-          <i className="fa fa-pie-chart" aria-hidden="true"></i> MuuCMS
+          <i className="fa fa-cube" aria-hidden="true"></i> MuuCMS
         </a>
       </h2>
 
