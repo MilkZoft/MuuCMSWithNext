@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 // Styles
 import styles from './Sidebar.scss';
 
-const Sidebar = () => (
+const Sidebar = ({ appName }) => (
   <div className={styles.sidebar}>
     <div className={styles.wrapper}>
       <h2 className={styles.brand}>
@@ -17,10 +17,20 @@ const Sidebar = () => (
       <h4 className={styles.title}>Apps</h4>
 
       <ul>
-        <li className={styles.active}>
+        <li className={appName === 'blog' ? styles.active : ''}>
           <a href="/dashboard/blog">
             <i className="fa"></i> &nbsp;
             Blog
+          </a>
+
+          <a href="#/create" className={styles.create}>
+            <i className="fa fa-plus" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li className={appName === 'pages' ? styles.active : ''}>
+          <a href="/dashboard/pages">
+            <i className="fa"></i> &nbsp;
+            Pages
           </a>
 
           <a href="#/create" className={styles.create}>

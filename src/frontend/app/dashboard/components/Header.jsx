@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './Header.scss';
 
-const Header = () => (
+const Header = ({ appName }) => (
   <header className={styles.navbar}>
     <nav>
       <a id="openMenu">
@@ -9,7 +9,7 @@ const Header = () => (
       </a> &nbsp;
     </nav>
 
-    <h2>Blog</h2>
+    <h2>{appName}</h2>
 
     <a href="#">
       <i className="fa theme" aria-hidden="true"></i>

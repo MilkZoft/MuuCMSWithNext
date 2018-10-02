@@ -34,7 +34,7 @@ nextApp
         action
       };
       console.log(req.params);
-      nextApp.render(req, res, '/dashboard/app', query);
+      nextApp.render(req, res, '/dashboard', query);
     });
 
     // Sending traffic to Next

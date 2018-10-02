@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Header from './Header';
 import styles from './Content.scss';
 
-const Content = () => (
+const Content = ({ appName, action }) => (
   <section className={styles.content}>
-    <Header />
+    <Header appName={appName} />
 
     <section className={styles.container}>
 

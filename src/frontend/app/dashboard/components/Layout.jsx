@@ -3,10 +3,10 @@ import Content from './Content';
 import Sidebar from './Sidebar';
 import './Layout.scss';
 
-const Layout = () => (
+const Layout = ({ url: { query: { appName, action } } }) => (
   <main>
-    <Sidebar />
-    <Content />
+    <Sidebar appName={appName} />
+    <Content appName={appName} action={action} />
   </main>
 );
 
