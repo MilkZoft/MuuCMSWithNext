@@ -1,10 +1,22 @@
+@import "../../../styles/_dependencies.scss";
+
 .logo {
   align-self: center;
-  width: 230px;
+  width: 268px;
+
+  &.isotype {
+    width: auto;
+  }
+
+  &.center {
+    margin: 0 auto;
+  }
 
   a {
-    color: #666;
-    display: block;
+    color: $doveGray;
+    display: inline-block;
+    text-decoration: none;
+    width: 268px;
     z-index: 200;
 
     img {
@@ -16,12 +28,13 @@
     }
 
     .brand {
+      @include font($openSans, $xLarge, $bold)
       font-size: 40px;
       font-weight: bold;
       vertical-align: middle;
 
       .code {
-        color: blue;
+        color: $lochmara;
       }
     }
   }

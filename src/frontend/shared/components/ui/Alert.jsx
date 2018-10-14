@@ -3,7 +3,7 @@ import React from 'react';
 import { string } from 'prop-types';
 
 // Utils
-import { cx } from '@Utils/frontend';
+import { cx } from '@frontend/shared/utils';
 
 // Components
 import Icon from './Icon';

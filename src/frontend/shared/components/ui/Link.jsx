@@ -1,7 +1,7 @@
 // Dependencies
 import React from 'react';
 import { bool, string } from 'prop-types';
-import { Link as NextLink } from 'next/link';
+import NextLink from 'next/link';
 
 const Link = props => {
   const { to, refresh = false, external = false } = props;

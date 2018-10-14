@@ -11,7 +11,9 @@
         "@app": "./src/frontend/app",
         "@layout": "./src/frontend/shared/components/layout",
         "@ui": "./src/frontend/shared/components/ui",
-        "@styles": "./src/frontend/shared/styles"
+        "@form": "./src/frontend/shared/components/form",
+        "@styles": "./src/frontend/shared/styles",
+        "@shared": "./src/shared"
       }
     }]
   ]

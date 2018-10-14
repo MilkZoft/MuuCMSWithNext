@@ -124,15 +124,15 @@
 @mixin font($font, $size: false, $weight: false, $color: false) {
   font-family: $font, sans-serif;
 
-  @if $weight !=false {
+  @if $weight != false {
     font-weight: $weight;
   }
 
-  @if $color !=false {
+  @if $color != false {
     color: $color;
   }
 
-  @if $size !=false {
+  @if $size != false {
     @include fontSize($size);
   }
 }

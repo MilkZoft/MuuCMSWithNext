@@ -1,46 +1,46 @@
-// @import '../../styles/_dependencies'
+@import '../../styles/_dependencies';
 
 .alert {
-    color: $white;
-    display: inline-block;
-    position: relative;
+  color: $white;
+  display: inline-block;
+  position: relative;
+  margin: 0 0 15px;
+  padding: 15px;
+  transition: all .3s;
+  border-radius: 4px;
+
+  &.general {
     margin: 0 0 15px;
-    padding: 15px;
-    transition: all .3s;
-    border-radius: 4px;
+  }
 
-    &.general {
-        margin: 0 0 15px;
+  &.forgotPassword {
+    width: 100%;
+  }
+
+  &.login {
+    margin-left: 25px;
+    margin-top: 25px;
+    width: 90%;
+
+    @include mobile {
+      margin-left: 15px;
+      width: 88%;
     }
+  }
 
-    &.forgotPassword {
-        width: 100%;
-    }
+  &.success {
+    background: $fernFrond;
+  }
 
-    &.login {
-        margin-left: 25px;
-        margin-top: 25px;
-        width: 90%;
+  &.info {
+    background: $chathamsBlue;
+  }
 
-        @include mobile {
-            margin-left: 15px;
-            width: 88%;
-        }
-    }
+  &.warning {
+    background: $mySin;
+  }
 
-    &.success {
-        background: $colors.states.success;
-    }
-
-    &.info {
-        background: $colors.states.info;
-    }
-
-    &.warning {
-        background: $colors.states.warning;
-    }
-
-    &.danger {
-        background: $colors.states.danger;
-    }
+  &.danger {
+    background: $thunderbird;
+  }
 }

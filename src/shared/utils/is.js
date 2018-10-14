@@ -1,6 +1,3 @@
-// Configuration
-import { $languages } from '@configuration';
-
 /**
  * Validates if a given variable is an Array
  *
@@ -69,16 +66,6 @@ export function isJson(str) {
   }
 
   return true;
-}
-
-/**
- * Validates if a given string is a valid language
- *
- * @param {string} language Language
- * @returns {boolean} True if is a valid language
- */
-export function isLanguage(language) {
-  return $languages().list.includes(language);
 }
 
 /**
