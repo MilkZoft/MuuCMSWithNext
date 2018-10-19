@@ -24,7 +24,7 @@ const Link = props => {
   }
 
   return (
-    <NextLink {...linkProps} href={url} />
+    <NextLink href={url}><a {...linkProps}>{linkProps.children}</a></NextLink>
   );
 };
 

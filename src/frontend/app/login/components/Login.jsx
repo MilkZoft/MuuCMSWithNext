@@ -26,7 +26,7 @@ class Login extends Component {
       username: '',
       password: ''
     },
-    loginError: false
+    // loginError: false
   };
 
   handleInputChanged = e => {
@@ -34,7 +34,7 @@ class Login extends Component {
   }
 
   handleSubmit = e => {
-
+    console.log(e);
   }
 
   render() {
@@ -47,17 +47,21 @@ class Login extends Component {
             <Text
               autoFocus={!this.state.username}
               name="username"
+              placeholder="Username"
               className={cx(styles.username, this.state.errors.username ? styles.required : '')}
               onChange={this.handleInputChanged}
               contentKey="Frontend.Users.Username.placeholder"
+              value={this.state.username}
             />
 
             <Password
               autoFocus={!!this.state.password}
               className={cx(styles.password, this.state.errors.password ? styles.required : '')}
+              placeholder="Password"
               name="password"
               onChange={this.handleInputChanged}
               contentKey="Frontend.Users.Password.placeholder"
+              value={this.state.password}
             />
 
             <Link
@@ -83,8 +87,26 @@ class Login extends Component {
               onClick={this.handleSubmit}
               data-content-key="Frontend.Users.Buttons.register"
             />
+
+            <div className={styles.socialLogin}>
+              <div className={styles.wrapper} data-content-key="Frontend.Users.Social.loginWith">
+                Login with
+
+                <div className={styles.icons}>
+                  <Link to="/auth/facebook" refresh external>
+                    <Icon type="facebook" className={styles.facebook} />
+                  </Link>
+
+                  <Link to="/auth/twitter" refresh external>
+                    <Icon type="twitter" className={styles.twitter} />
+                  </Link>
+                </div>
+              </div>
+            </div>
           </Form>
         </div>
+
+        <CopyRight className={styles.copyRight} />
       </div>
     );
   }

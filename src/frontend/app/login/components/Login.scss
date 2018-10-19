@@ -12,6 +12,11 @@
     position: relative;
     width: 500px;
 
+    @include mobile {
+      margin-top: 50px;
+      width: 320px;
+    }
+
     .success {
       text-align: center;
     }
@@ -26,7 +31,8 @@
       .username,
       .password,
       .email {
-        color: white;
+        color: $white;
+        background: $black;
         border-radius: 5px;
         border: 1px solid $alto;
         line-height: 1.4;
@@ -37,28 +43,69 @@
       }
 
       .required {
-        background: red;
-        border: 1px solid red;
+        background: $red;
+        border: 1px solid $red;
       }
 
       .login {
         float: left;
         margin-right: 10px;
+
+        @include mobile {
+          margin-right: 5px;
+        }
       }
 
       .register {
         float: left;
       }
     }
+
+    .socialLogin {
+      .wrapper {
+        @include fontSize($large, $bold);
+        color: black;
+        margin: 0 auto;
+        padding: 20px 0 20px 0px;
+        width: 90%;
+
+        @include mobile {
+          @include fontSize($regular);
+        }
+
+        .icons {
+          @include fontSize($xLarge);
+          float: right;
+
+          @include mobile {
+            margin-top: -6px;
+          }
+
+          .facebook {
+            color: $facebook;
+            padding-right: 10px;
+          }
+
+          .twitter {
+            color: $twitter;
+          }
+        }
+      }
+    }
   }
 
   .copyRight {
-    color: #777;
+    @include font($openSans, $medium);
+    color: $boulder;
     margin-top: 20px;
     text-align: center;
 
+    @include mobile {
+      @include fontSize($small);
+    }
+
     a {
-      color: blue;
+      color: $torchRed;
     }
   }
 }

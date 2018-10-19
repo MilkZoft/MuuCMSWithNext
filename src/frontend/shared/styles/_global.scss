@@ -1,6 +1,22 @@
+@import './_mixins';
+
 input {
   appearance: none;
   background-clip: padding-box;
   outline: none;
   border: none;
+}
+
+input:-webkit-autofill {
+  @include prefix(box-shadow, 0 0 0px 1000px $black inset);
+  -webkit-text-fill-color: $white;
+}
+
+a {
+  color: $codGray;
+  text-decoration: none;
+
+  &:hover {
+    color: $dodgerBlue;
+  }
 }

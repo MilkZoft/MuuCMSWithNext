@@ -3,7 +3,7 @@ import React from 'react';
 import { string } from 'prop-types';
 
 const CopyRight = props => {
-  const { className = 'CopyRight' } = props;
+  const { className = 'copyRight' } = props;
 
   return (
     <div className={className}>
