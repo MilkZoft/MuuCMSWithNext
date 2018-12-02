@@ -2,14 +2,31 @@
 import express from 'express';
 import next from 'next';
 import path from 'path';
-import graphQLExpress from 'apollo-server-express';
-import { makeExecutableSchema } from 'graphql-tools';
-import jwt from 'express-jwt';
+// import jwt from 'express-jwt';
 import bodyParser from 'body-parser';
+import { GraphQLServer } from 'graphql-yoga';
 
 // GraphQL
-import { typeDefs } from './types/Query';
-import { resolvers } from './types/Resolvers';
+import db from './graphql/data/db';
+import Query from './graphql/resolvers/Query';
+import Mutation from './graphql/resolvers/Mutation';
+import Comment from './graphql/resolvers/Comment';
+import Post from './graphql/resolvers/Post';
+import User from './graphql/resolvers/User';
+
+const graphQLServer = new GraphQLServer({
+  typeDefs: './src/backend/graphql/schema/schema.graphql',
+  resolvers: {
+    Query,
+    Mutation,
+    Comment,
+    Post,
+    User
+  },
+  context: {
+    db
+  }
+});
 
 // Environment
 const dev = process.env.NODE_ENV !== 'production';
@@ -33,25 +50,18 @@ nextApp
     app.use(bodyParser.json());
 
     // Authentication Middleware
-    app.use(jwt({ secret: 'codejobs' }));
-
-    // Schema
-    const schema = makeExecutableSchema({
-      typeDefs,
-      resolvers
-    });
+    // app.use(jwt({ secret: 'codejobs' }));
 
     // Static Public
     app.use('/node_modules', express.static(path.join(__dirname, '../../node_modules')));
     app.use(express.static(path.join(__dirname, '../../public')));
 
     // GraphiQL
-    app.use('/api', graphQLExpress(req => ({
-      schema,
-      context: {
-        user: req.user
-      }
-    })));
+    app.use('/api', () => {
+      graphQLServer.start(() => {
+        console.log('The server is up');
+      });
+    });
 
     // Custom Routes
     app.get('/dashboard/:appName/:action?', (req, res) => {
